@@ -9,8 +9,8 @@ alias tu='top -o cpu'
 alias of='open .'
 
 function take {
-	mkdir $1
-	cd $1
+    mkdir $1
+    cd $1
 }
 
 # ------------------------------------
@@ -25,6 +25,6 @@ alias gb='git branch'
 alias go='git checkout'
 
 function gint {
-	git init
-	echo '.DS_Store' > .gitignore
+    git init
+    echo '.DS_Store' > .gitignore
 }
