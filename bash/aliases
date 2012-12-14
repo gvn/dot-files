@@ -1,14 +1,30 @@
+# ------------------------------------
 # General
+# ------------------------------------
 
-alias la='ls -al'
+alias ..='cd ..'
+alias l='ls -al'
 alias reload='source ~/.bashrc'
-alias tu='top -o cpu' #cpu
+alias tu='top -o cpu'
+alias of='open .'
 
+function take {
+	mkdir $1
+	cd $1
+}
+
+# ------------------------------------
 # Git
+# ------------------------------------
 
 alias g='git status'
 alias ga='git add'
 alias gc='git commit'
-alias gd='git diff'
+alias gd='clear && git diff'
 alias gb='git branch'
 alias go='git checkout'
+
+function gint {
+	git init
+	echo '.DS_Store' > .gitignore
+}
