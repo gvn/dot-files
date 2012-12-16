@@ -9,7 +9,7 @@ alias gocode='cd ~/Dropbox/Code/'
 # ------------------------------------
 
 alias ..='cd ..'
-alias l='ls -al'
+alias l='ls -Alhp'
 alias reload='source ~/.bashrc'
 alias tu='top -o cpu'
 alias of='open .'
