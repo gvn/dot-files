@@ -42,7 +42,7 @@ function gint {
 # Create a new static website scaffold
 function webstarter() {
     local projectName="${1:-website}"
-    git clone https://github.com/gvn/build-template.git $projectName
+    git clone --depth=1 https://github.com/gvn/build-template.git $projectName
     cd $projectName
     rm -rf .git # Remove old bindings since this is boilerplate
     echo '.DS_Store' > .gitignore
