@@ -3,6 +3,7 @@
 # ------------------------------------
 
 alias gocode='cd ~/Dropbox/Code/'
+alias godots='cd ~/bin/dotfiles'
 
 # ------------------------------------
 # General
@@ -42,12 +43,39 @@ function gint {
 # Create a new static website scaffold
 function webstarter() {
     local projectName="${1:-website}"
+
+    # Only pull the latest revision with no history
     git clone --depth=1 https://github.com/gvn/build-template.git $projectName
+
     cd $projectName
-    rm -rf .git # Remove old bindings since this is boilerplate
+
+    # Remove old bindings since this is a new project
+    rm -rf .git
+
     echo '.DS_Store' > .gitignore
     echo $projectName > README.md
     git init
+}
+
+# Create a JavaScript component scaffold
+# TODO: lowercase filename
+# TODO: "window" for default namespace (don't prepend to filename)
+# TODO: remove spaces from component name input
+function jsc() {
+    echo -n "Component Name: "
+    read className
+
+    echo -n "Namespace: "
+    read namespace
+
+    local filename=$namespace.$className.js
+
+    curl https://raw.github.com/gvn/component-pattern/master/component.js > $filename
+
+    sed -i .bak "s/Component/$className/g" $filename
+    sed -i .bak "s/window/$namespace/g" $filename
+
+    rm $filename.bak
 }
 
 # Start an HTTP server from a directory, optionally specifying the port
