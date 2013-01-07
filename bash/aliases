@@ -9,6 +9,8 @@ alias godots='cd ~/bin/dotfiles'
 # General
 # ------------------------------------
 
+# TODO - Alias rm to mv to trash
+
 alias ..='cd ..'
 alias l='ls -Alhp'
 alias reload='source ~/.bashrc'

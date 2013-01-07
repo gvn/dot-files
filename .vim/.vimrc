@@ -1,7 +1,11 @@
+call pathogen#infect()
 syntax enable
+filetype plugin indent on
 
 set softtabstop=4
 set number
 set ruler
 
-colorscheme vividchalk
+colorscheme molokai
+let g:molokai_original = 1
+set gfn="Ubuntu Mono"
