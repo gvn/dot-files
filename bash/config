@@ -24,6 +24,9 @@ PURPLE='\e[0;35m'
 CYAN='\e[0;36m'
 WHITE='\e[0;37m'
 
+# Load in the git branch prompt script.
+source ~/.git-prompt.sh
+
 # Prompt
 
-PS1="\u \[$YELLOW\]\w \[$OFF\]\[$BOLD_CYAN\]▶ \[$OFF\]"
+PS1="\[$YELLOW\]\w\[$OFF\]\$(__git_ps1)\[$BOLD_CYAN\] ▶ \[$OFF\]"

@@ -8,4 +8,3 @@ set ruler
 
 colorscheme molokai
 let g:molokai_original = 1
-set gfn="Ubuntu Mono"

@@ -1,5 +1,5 @@
 if has('gui_running')
-    set guifont=Ubuntu\ Mono:h14            " Font family and font size.
+    set guifont=Ubuntu\ Mono:h16            " Font family and font size.
 endif
 
 set antialias                   " MacVim: smooth fonts.
