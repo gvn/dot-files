@@ -56,9 +56,11 @@ function webstarter() {
     # Remove old bindings since this is a new project
     rm -rf .git
 
-    echo '.DS_Store' > .gitignore
-    echo $projectName > README.md
+    echo '#' $projectName > README.md
     git init
+    npm install
+    mkdir _fe/img/
+    mkdir _fe/sass/components/
 }
 
 # Create a JavaScript component scaffold

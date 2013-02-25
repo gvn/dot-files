@@ -30,3 +30,6 @@ source ~/.git-prompt.sh
 # Prompt
 
 PS1="\[$YELLOW\]\w\[$OFF\]\$(__git_ps1)\[$BOLD_CYAN\] ▶ \[$OFF\]"
+
+# Grunt
+eval "$(grunt --completion=bash)"
