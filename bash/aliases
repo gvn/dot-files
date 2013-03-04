@@ -3,7 +3,7 @@
 # ------------------------------------
 
 alias gocode='cd ~/Dropbox/Code/'
-alias godots='cd ~/bin/dotfiles'
+alias godots='cd ~/Dropbox/dotfiles/'
 
 # ------------------------------------
 # General
