@@ -1,12 +1,18 @@
 /*global slate: false */
 /*jslint browser: false, sloppy: true, forin: true, plusplus: true, maxerr: 50, indent: 4 */
 
+/*
+    TODO:
+
+    - resize/move windows on screen plug/unplug
+    - launch apps with f19 shortcuts if they're not already open
+
+*/
+
 // CONFIG
 
 slate.configAll({
-    defaultToCurrentScreen: true,
-    nudgePercentOf: 'screenSize',
-    resizePercentOf: 'screenSize'
+    defaultToCurrentScreen: true
 });
 
 // WINDOW RESIZING
@@ -32,6 +38,15 @@ var fullscreen = slate.operation('move', {
     height: 'screenSizeY'
 });
 
+var showAndFocusApp = function (appName) {
+    return slate.operation('sequence', {
+        'operations': [
+            [slate.operation('show', {app: appName})],
+            [slate.operation('focus', {app: appName})]
+        ]
+    });
+};
+
 // BINDINGS
 
 slate.bindAll({
@@ -40,12 +55,12 @@ slate.bindAll({
     'right:ctrl;cmd': moveRight,
 
     // Most common apps on home row
-    'j:f19': slate.operation('focus', {app: 'Google Chrome'}),
-    'k:f19': slate.operation('focus', {app: 'Sublime Text 2'}),
-    'l:f19': slate.operation('focus', {app: 'Terminal'}),
+    'j:f19': showAndFocusApp('Google Chrome'),
+    'k:f19': showAndFocusApp('Sublime Text 2'),
+    'l:f19': showAndFocusApp('Terminal'),
 
-    'm:f19': slate.operation('focus', {app: 'Mail'}),
-    'a:f19': slate.operation('focus', {app: 'Adium'}),
-    'i:f19': slate.operation('focus', {app: 'iCal'}),
-    'p:f19': slate.operation('focus', {app: 'Spotify'})
+    'm:f19': showAndFocusApp('Mail'),
+    'a:f19': showAndFocusApp('Adium'),
+    'i:f19': showAndFocusApp('iCal'),
+    'p:f19': showAndFocusApp('Spotify')
 });
