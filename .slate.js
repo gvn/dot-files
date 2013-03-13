@@ -41,8 +41,8 @@ var fullscreen = slate.operation('move', {
 var showAndFocusApp = function (appName) {
     return slate.operation('sequence', {
         'operations': [
-            [slate.operation('show', {app: appName})],
-            [slate.operation('focus', {app: appName})]
+            [slate.operation('focus', {app: appName})],
+            [slate.operation('show', {app: appName})]
         ]
     });
 };
@@ -57,7 +57,7 @@ slate.bindAll({
     // Most common apps on home row
     'j:f19': showAndFocusApp('Google Chrome'),
     'k:f19': showAndFocusApp('Sublime Text 2'),
-    'l:f19': showAndFocusApp('Terminal'),
+    'l:f19': showAndFocusApp('iTerm'),
 
     'm:f19': showAndFocusApp('Mail'),
     'a:f19': showAndFocusApp('Adium'),

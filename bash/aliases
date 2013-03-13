@@ -47,7 +47,7 @@ function gint {
 # ------------------------------------
 
 # Create a new static website scaffold
-function webstarter() {
+function spartan() {
     local projectName="${1:-website}"
 
     # Only pull the latest revision with no history
@@ -61,8 +61,13 @@ function webstarter() {
     echo '#' $projectName > README.md
     git init
     npm install
-    mkdir _fe/img/
-    mkdir _fe/sass/components/
+
+    # Remove all .gitignores from subdirectories
+    # Empty .gitignores are used to commit "empty" dirs
+    find ./* -name .gitignore -type f -delete
+
+    git add .
+    git commit -am 'Initial commit'
 }
 
 # Create a JavaScript component scaffold
