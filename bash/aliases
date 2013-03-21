@@ -46,30 +46,6 @@ function gint {
 # Web
 # ------------------------------------
 
-# Create a new static website scaffold
-function spartan() {
-    local projectName="${1:-website}"
-
-    # Only pull the latest revision with no history
-    git clone --depth=1 https://github.com/gvn/build-template.git $projectName
-
-    cd $projectName
-
-    # Remove old bindings since this is a new project
-    rm -rf .git
-
-    echo '#' $projectName > README.md
-    git init
-    npm install
-
-    # Remove all .gitignores from subdirectories
-    # Empty .gitignores are used to commit "empty" dirs
-    find ./* -name .gitignore -type f -delete
-
-    git add .
-    git commit -am 'Initial commit'
-}
-
 # Create a JavaScript component scaffold
 function jsc() {
     echo -n "Component Name: "
