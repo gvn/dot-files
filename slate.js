@@ -4,14 +4,17 @@
 /*
     TODO:
 
-    - adium layout
-    - 2 monitor layout
-    - resize/move windows on screen plug/unplug
+    - adium on correct screen
     - launch apps with f19 shortcuts if they're not already open
 
 */
 
 // CONFIG
+
+var monitors = {
+    viewsonic: '1920x1080',
+    mbp: '1680x1050'
+};
 
 slate.configAll({
     defaultToCurrentScreen: true
@@ -40,10 +43,24 @@ var fullscreen = slate.operation('move', {
     height: 'screenSizeY'
 });
 
+var fullscreen2 = slate.operation('move', {
+    x: 'screenOriginX',
+    y: 'screenOriginY',
+    width: 'screenSizeX',
+    height: 'screenSizeY',
+    screen: 'monitors.viewsonic'
+});
+
 var adiumChat = slate.operation('move', {
     x: 'screenOriginX + screenSizeX / 2',
     y: 'screenOriginY',
     width: 'screenSizeX * 0.4',
+    height: 'screenSizeY * 0.666'
+});
+
+var adiumContacts = slate.operation('corner', {
+    direction: 'top-right',
+    width: 'screenSizeX * 0.1',
     height: 'screenSizeY * 0.666'
 });
 
@@ -62,6 +79,16 @@ var hashes = {
     allWindowsFullscreen: {
         'operations': [fullscreen],
         'repeat': true
+    },
+    allWindowsFullscreen2: {
+        'operations': [fullscreen2],
+        'repeat': true
+    },
+    adium: {
+        'operations': [adiumContacts, adiumChat],
+        'title-order' : ['Contacts'],
+        'repeat-last': true,
+        'ignore-fail': true
     }
 };
 
@@ -75,15 +102,18 @@ var oneMonitorLayout = slate.layout('oneMonitor', {
     'iTerm': hashes.allWindowsFullscreen,
     'Mou': hashes.allWindowsFullscreen,
     'Xcode': hashes.allWindowsFullscreen,
-
-    'Adium': {
-        'operations': [adiumChat],
-        'repeat': false
-    }
+    'Adium': hashes.adium
 });
 
 var twoMonitorLayout = slate.layout('twoMonitors', {
-    // TODO
+    'Sublime Text 2': hashes.allWindowsFullscreen,
+    'iCal': hashes.allWindowsFullscreen2,
+    'Spotify': hashes.allWindowsFullscreen2,
+    'Mail': hashes.allWindowsFullscreen2,
+    'iTerm': hashes.allWindowsFullscreen,
+    'Mou': hashes.allWindowsFullscreen,
+    'Xcode': hashes.allWindowsFullscreen,
+    'Adium': hashes.adium
 });
 
 // LAYOUT OPERATIONS

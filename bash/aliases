@@ -23,6 +23,7 @@ function take {
 }
 
 alias hardlinks='find . -type f -links +1'
+alias mou='open -a Mou'
 
 # ------------------------------------
 # Git
