@@ -33,3 +33,6 @@ PS1="\[$YELLOW\]\w\[$OFF\]\$(__git_ps1)\[$BOLD_CYAN\] ▶ \[$OFF\]"
 
 # Grunt
 eval "$(grunt --completion=bash)"
+
+# iTerm tab name = current directory
+export PROMPT_COMMAND='echo -ne "\\033]0;${PWD##*/}\\007"'
