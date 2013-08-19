@@ -1,6 +1,3 @@
-/*global slate: false */
-/*jslint browser: false, sloppy: true, forin: true, plusplus: true, maxerr: 50, indent: 4 */
-
 /*
     TODO:
 
@@ -130,7 +127,7 @@ slate.bindAll({
 
     // Most common apps on home row
     'j:f19': showAndFocusApp('Google Chrome'),
-    'k:f19': showAndFocusApp('Sublime Text 2'),
+    'k:f19': showAndFocusApp('Sublime Text'),
     'l:f19': showAndFocusApp('iTerm'),
 
     // Semi-common apps
