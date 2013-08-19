@@ -129,12 +129,13 @@ slate.bindAll({
     'j:f19': showAndFocusApp('Google Chrome'),
     'k:f19': showAndFocusApp('Sublime Text'),
     'l:f19': showAndFocusApp('iTerm'),
+    ';:f19': showAndFocusApp('Adium'),
 
     // Semi-common apps
     'm:f19': showAndFocusApp('Mail'),
-    'a:f19': showAndFocusApp('Adium'),
     'i:f19': showAndFocusApp('iCal'),
     'p:f19': showAndFocusApp('Spotify'),
+    'f:f19': showAndFocusApp('Finder'),
 
     // Manual environment-specific-layout triggers
     '1:f19': oneMonitor,
