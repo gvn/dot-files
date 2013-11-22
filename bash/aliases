@@ -34,8 +34,9 @@ alias ga='git add'
 alias gc='git commit'
 alias gcv='git commit -v'
 alias gd='git diff --unified=5 | subl'
-alias gbranch='git checkout -b'
-alias gout='git checkout'
+alias gb='git branch -v'
+alias gcb='git checkout -b'
+alias gco='git checkout'
 alias gig='git update-index --assume-unchanged'
 alias gunig='git update-index --no-assume-unchanged'
 
@@ -83,7 +84,7 @@ function jsc() {
 
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
-    local port="${1:-8000}"
+    local port="${1:-31337}"
     open "http://localhost:${port}/" && python -m SimpleHTTPServer "$port"
 }
 

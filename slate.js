@@ -133,7 +133,9 @@ slate.bindAll({
 
     // Semi-common apps
     'm:f19': showAndFocusApp('Mail'),
-    'i:f19': showAndFocusApp('iCal'),
+    'u:f19': showAndFocusApp('Things'),
+    'i:f19': showAndFocusApp('Calendar'),
+    'o:f19': showAndFocusApp('Photoshop'),
     'p:f19': showAndFocusApp('Spotify'),
     'f:f19': showAndFocusApp('Finder'),
 
