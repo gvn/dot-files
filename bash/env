@@ -2,7 +2,7 @@
 # https://github.com/github/hub
 eval "$(hub alias -s)"
 
-export EDITOR="subl -w"
+export EDITOR="subl"
 export PATH=$PATH:~/bin
 
 # Don’t clear the screen after quitting a manual page

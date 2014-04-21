@@ -4,6 +4,7 @@
 
 alias gocode='cd ~/Dropbox/Code/'
 alias godots='cd ~/Dropbox/dotfiles/'
+alias gozilla='cd ~/Documents/mozilla-code/'
 
 # ------------------------------------
 # General
@@ -18,7 +19,7 @@ alias tu='top -o cpu'
 alias of='open .'
 
 function take {
-    mkdir $1
+    mkdir -p $1
     cd $1
 }
 
@@ -32,11 +33,16 @@ alias mou='open -a Mou'
 alias g='git status'
 alias ga='git add'
 alias gc='git commit'
-alias gcv='git commit -v'
 alias gd='git diff --unified=5 | subl'
 alias gb='git branch -v'
+alias guncommit='git reset --soft HEAD~1'
+alias grem='git remote -v'
+alias gitzilla='git pull mozilla master'
+
 alias gcb='git checkout -b'
 alias gco='git checkout'
+alias gcm='git checkout master'
+
 alias gig='git update-index --assume-unchanged'
 alias gunig='git update-index --no-assume-unchanged'
 
