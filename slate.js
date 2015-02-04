@@ -126,6 +126,7 @@ slate.bindAll({
     'right:ctrl;cmd': halfRight,
 
     // Most common apps on home row
+    'h:f19': showAndFocusApp('Firefox'),
     'j:f19': showAndFocusApp('Google Chrome'),
     'k:f19': showAndFocusApp('Sublime Text'),
     'l:f19': showAndFocusApp('iTerm'),

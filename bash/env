@@ -3,7 +3,9 @@
 eval "$(hub alias -s)"
 
 export EDITOR="subl"
+
 export PATH=$PATH:~/bin
+export PATH="$(brew --prefix)/bin:$PATH"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
