@@ -39,3 +39,6 @@ export PROMPT_COMMAND='echo -ne "\\033]0;${PWD##*/}\\007"'
 
 # Fire up personal crontab
 crontab ~/.crontab
+
+# Switch to Vim mode for prompt
+set -o vi

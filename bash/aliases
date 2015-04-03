@@ -27,6 +27,14 @@ alias hardlinks='find . -type f -links +1'
 alias mou='open -a Mou'
 
 # ------------------------------------
+# Android
+# ------------------------------------
+
+alias devices='adb devices'
+alias logcat='adb logcat CordovaLog:D *:S'
+alias forward='adb forward tcp:6000 localfilesystem:/data/local/debugger-socket'
+
+# ------------------------------------
 # Git
 # ------------------------------------
 
@@ -53,20 +61,15 @@ function gint {
 }
 
 # ------------------------------------
+# npm
+# ------------------------------------
+
+alias npmglobal='npm list -g --depth=0'
+alias run='npm run'
+
+# ------------------------------------
 # Web
 # ------------------------------------
 
-# Start an HTTP server from a directory, optionally specifying the port
-function server() {
-    local port="${1:-31337}"
-    open "http://localhost:${port}/" && python -m SimpleHTTPServer "$port"
-}
-
-# Start a PHP server from a directory, optionally specifying the port
-# (Requires PHP 5.4.0+.)
-function phpserver() {
-    local port="${1:-4000}"
-    local ip=$(ipconfig getifaddr en1)
-    sleep 1 && open "http://${ip}:${port}/" &
-    php -S "${ip}:${port}"
-}
+# npm install -g node-static
+alias server='static'
