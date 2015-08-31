@@ -19,8 +19,8 @@ alias tu='top -o cpu'
 alias of='open .'
 
 function take {
-    mkdir -p $1
-    cd $1
+  mkdir -p $1
+  cd $1
 }
 
 alias hardlinks='find . -type f -links +1'
@@ -42,11 +42,11 @@ alias g='git status'
 alias ga='git add'
 alias gcamend='git commit --amend'
 alias gc='git commit'
-alias gd='git diff --unified=5'
+alias gd='clear; git diff --unified=5'
 alias gb='git branch -v'
 alias guncommit='git reset --soft HEAD~1'
-alias grem='git remote -v'
-alias gitzilla='git pull mozilla master'
+alias gr='git remote -v'
+alias gitzilla='git pull mozilla develop'
 
 alias gcb='git checkout -b'
 alias gco='git checkout'
@@ -56,8 +56,8 @@ alias gig='git update-index --assume-unchanged'
 alias gunig='git update-index --no-assume-unchanged'
 
 function gint {
-    git init
-    echo '.DS_Store' > .gitignore
+  git init
+  echo '.DS_Store' > .gitignore
 }
 
 # ------------------------------------

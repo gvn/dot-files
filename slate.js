@@ -128,12 +128,12 @@ slate.bindAll({
     // Most common apps on home row
     'h:f19': showAndFocusApp('Firefox'),
     'j:f19': showAndFocusApp('Google Chrome'),
-    'k:f19': showAndFocusApp('Sublime Text'),
+    'k:f19': showAndFocusApp('Atom'),
     'l:f19': showAndFocusApp('iTerm'),
     ';:f19': showAndFocusApp('IRC Cloud'),
 
     // Semi-common apps
-    'm:f19': showAndFocusApp('Mail'),
+    'm:f19': showAndFocusApp('Android Studio'),
     'u:f19': showAndFocusApp('Things'),
     'i:f19': showAndFocusApp('Calendar'),
     'o:f19': showAndFocusApp('Photoshop'),
