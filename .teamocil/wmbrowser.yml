@@ -1,0 +1,7 @@
+windows:
+  - name: webmaker-browser
+    root: ~/Documents/mozilla-code/webmaker-browser
+    layout: even-horizontal
+    panes:
+      - git status
+      - npm run dev

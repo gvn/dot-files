@@ -1,0 +1,7 @@
+windows:
+  - name: webmaker-core
+    root: ~/Documents/mozilla-code/webmaker-core
+    layout: even-horizontal
+    panes:
+      - git status
+      - npm start

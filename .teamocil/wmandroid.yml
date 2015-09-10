@@ -1,0 +1,7 @@
+windows:
+  - name: webmaker-android
+    root: ~/Documents/mozilla-code/webmaker-android
+    layout: even-horizontal
+    panes:
+      - git status
+      - npm start
