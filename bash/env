@@ -20,7 +20,3 @@ export HISTCONTROL=ignoredupis
 # Android Shit
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
-# NVM
-source ~/bin/nvm/nvm.sh
-nvm use 0.12
