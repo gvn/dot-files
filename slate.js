@@ -130,7 +130,7 @@ slate.bindAll({
     'j:f19': showAndFocusApp('Google Chrome'),
     'k:f19': showAndFocusApp('Atom'),
     'l:f19': showAndFocusApp('iTerm'),
-    ';:f19': showAndFocusApp('IRC Cloud'),
+    ';:f19': showAndFocusApp('IRCCloud'),
 
     // Semi-common apps
     'm:f19': showAndFocusApp('Android Studio'),
