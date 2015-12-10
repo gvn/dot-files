@@ -1,10 +1,9 @@
-call pathogen#infect()
 syntax enable
-filetype plugin indent on
 
-set softtabstop=4
-set number
+set tabstop=2         " visual spaces per TAB
+set softtabstop=2     " number of spaces per tab
+set expandtab         " tabs are spaces
+
+set number            " show line numbers
+set showmatch         " highlight matching [{(
 set ruler
-
-colorscheme molokai
-let g:molokai_original = 1
