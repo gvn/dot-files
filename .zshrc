@@ -2,11 +2,6 @@
 export ZSH=/Users/gvn/Dropbox/dotfiles/.oh-my-zsh
 
 ZSH_CUSTOM=/Users/gvn/Dropbox/dotfiles/zsh.custom
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="gvn"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -44,10 +39,6 @@ ZSH_THEME="gvn"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
   brew
@@ -57,7 +48,8 @@ plugins=(
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/gvn/bin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -81,6 +73,14 @@ source $ZSH/oh-my-zsh.sh
 # Switch to Vim mode for prompt
 set -o vi
 
+# Android Shit
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+# Docker stuff
+alias dockup="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'"
+# eval "$(docker-machine env default)" # ?
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -91,14 +91,6 @@ set -o vi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # ------------------------------------
-# Directory Bookmarks
-# ------------------------------------
-
-alias gocode='cd ~/Dropbox/Code/'
-alias godots='cd ~/Dropbox/dotfiles/'
-alias gozilla='cd ~/Documents/mozilla-code/'
-
-# ------------------------------------
 # General
 # ------------------------------------
 
@@ -106,6 +98,8 @@ alias ..='cd ..'
 alias l='ls -Alhp'
 alias reload='source ~/.zshrc'
 alias of='open .'
+alias top='top -o cpu'
+alias disks='diskutil list'
 
 function take {
   mkdir -p $1
@@ -124,6 +118,7 @@ alias forward='adb forward tcp:6000 localfilesystem:/data/local/debugger-socket'
 # Git
 # ------------------------------------
 
+alias git='hub' # For `hub` – https://github.com/github/hub
 alias g='git status'
 alias ga='git add'
 alias gcamend='git commit --amend'
@@ -133,6 +128,7 @@ alias gb='git branch -v'
 alias guncommit='git reset --soft HEAD~1'
 alias gr='git remote -v'
 alias gitzilla='git pull mozilla develop'
+alias gpom='git push origin master'
 
 alias gcb='git checkout -b'
 alias gco='git checkout'
@@ -152,6 +148,7 @@ function gint {
 
 alias npmglobal='npm list -g --depth=0'
 alias run='npm run'
+alias npmi='npm install'
 
 # ------------------------------------
 # Web
