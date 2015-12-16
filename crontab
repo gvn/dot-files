@@ -1,0 +1,9 @@
+# WAT? –> http://crontab.guru
+# ┌────────────────────────── minute
+# |    ┌───────────────────── hour
+# |    |    ┌──────────────── day of month
+# |    |    |    ┌─────────── month
+# |    |    |    |    ┌────── day of week
+# |    |    |    |    |
+# ▼    ▼    ▼    ▼    ▼       command
+  */5  *    *    *    *       /usr/local/bin/node /Users/gvn/bin/youtube-to-plex/index.js
