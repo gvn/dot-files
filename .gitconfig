@@ -1,0 +1,31 @@
+[user]
+	name = Gavin Lazar Suntop
+	email = gavin@gsuntop.com
+[github]
+	user = gvn
+[color]
+	# Use colors in Git commands that are capable of colored output when outputting to the terminal
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[core]
+	excludesfile = /Users/gvn/Dropbox/dotfiles/.gitignore-global
+[dropbox]
+	folder = /Users/gsuntop/Dropbox/Code/_git
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[credential]
+	helper = osxkeychain
