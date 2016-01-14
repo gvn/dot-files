@@ -44,11 +44,14 @@ plugins=(
   brew
   npm
   autojump
+  extract
+  colored-man-pages
+  colorize
 )
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/gvn/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/gvn/bin:/usr/local/sbin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -96,15 +99,29 @@ alias dockup="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/
 
 alias ..='cd ..'
 alias l='ls -Alhp'
-alias reload='source ~/.zshrc'
+alias reload='source ~/.zshrc && clear'
 alias of='open .'
 alias top='top -o cpu'
 alias disks='diskutil list'
+alias ejectcd='diskutil eject /dev/disk3'
+alias rip='abcde'
+alias mou='open -a Mou'
+alias install-app='brew cask install'
+alias weather='ansiweather -l seattle -u imperial'
 
 function take {
   mkdir -p $1
   cd $1
 }
+
+alias h='history'
+alias hsi='hs -i'
+
+# Homebrew
+alias brews='brew list -1 | more'
+alias bubo='brew update && brew outdated'
+alias bubc='brew upgrade && brew cleanup'
+alias bubu='bubo && bubc'
 
 # ------------------------------------
 # Android
@@ -129,13 +146,15 @@ alias guncommit='git reset --soft HEAD~1'
 alias gr='git remote -v'
 alias gitzilla='git pull mozilla develop'
 alias gpom='git push origin master'
-
+alias ghp-fresh='git checkout --orphan gh-pages'
 alias gcb='git checkout -b'
 alias gco='git checkout'
 alias gcm='git checkout master'
 
 alias gig='git update-index --assume-unchanged'
 alias gunig='git update-index --no-assume-unchanged'
+
+alias gbro='git browse'
 
 function gint {
   git init
