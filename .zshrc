@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/gvn/Dropbox/dotfiles/.oh-my-zsh
+export ZSH=/Users/gvn/Google\ Drive/dotfiles/.oh-my-zsh
 
-ZSH_CUSTOM=/Users/gvn/Dropbox/dotfiles/zsh.custom
+ZSH_CUSTOM=/Users/gvn/Google\ Drive/dotfiles/zsh.custom
 ZSH_THEME="gvn"
 
 # Uncomment the following line to use case-sensitive completion.

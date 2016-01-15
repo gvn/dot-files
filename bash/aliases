@@ -2,8 +2,8 @@
 # Directory Bookmarks
 # ------------------------------------
 
-alias gocode='cd ~/Dropbox/Code/'
-alias godots='cd ~/Dropbox/dotfiles/'
+alias gocode='cd ~/Google\ Drive/Code/'
+alias godots='cd ~/Google\ Drive/dotfiles/'
 alias gozilla='cd ~/Documents/mozilla-code/'
 
 # ------------------------------------

@@ -20,9 +20,9 @@
 	changed = green
 	untracked = cyan
 [core]
-	excludesfile = /Users/gvn/Dropbox/dotfiles/.gitignore-global
+	excludesfile = "/Users/gvn/Google Drive/dotfiles/.gitignore-global"
 [dropbox]
-	folder = /Users/gsuntop/Dropbox/Code/_git
+	folder = "/Users/gsuntop/Google Drive/Code/_git"
 [filter "media"]
 	required = true
 	clean = git media clean %f
