@@ -51,7 +51,7 @@ plugins=(
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/gvn/bin:/usr/local/sbin"
+export PATH="/usr/local/php5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/gvn/bin:/usr/local/sbin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -108,6 +108,7 @@ alias rip='abcde'
 alias mou='open -a Mou'
 alias install-app='brew cask install'
 alias weather='ansiweather -l seattle -u imperial'
+alias vtop='vtop --theme monokai'
 
 function take {
   mkdir -p $1
