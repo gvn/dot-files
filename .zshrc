@@ -111,8 +111,11 @@ alias weather='ansiweather -l seattle -u imperial'
 alias vtop='vtop --theme monokai'
 
 function take {
-  mkdir -p $1
-  cd $1
+  mkdir -p $1 && cd $1
+}
+
+function swatch {
+  watch --no-title --interval 1 --color $1
 }
 
 alias h='history'
@@ -151,6 +154,10 @@ alias ghp-fresh='git checkout --orphan gh-pages'
 alias gcb='git checkout -b'
 alias gco='git checkout'
 alias gcm='git checkout master'
+
+function gsquash () {
+  git rebase -i "HEAD~$1"
+}
 
 alias gig='git update-index --assume-unchanged'
 alias gunig='git update-index --no-assume-unchanged'
