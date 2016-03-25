@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/gvn/Google\ Drive/dotfiles/.oh-my-zsh
+export ZSH=/Users/gvn/dotfiles/.oh-my-zsh
 
-ZSH_CUSTOM=/Users/gvn/Google\ Drive/dotfiles/zsh.custom
+ZSH_CUSTOM=/Users/gvn/dotfiles/zsh.custom
 ZSH_THEME="gvn"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -97,6 +97,9 @@ alias dockup="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/
 # General
 # ------------------------------------
 
+alias plex-admin='open http://sulaco.local:32400/web/index.html'
+alias syncthing-admin='open http://127.0.0.1:8384'
+alias tweakzshrc='vim /Users/gvn/Google\ Drive/dotfiles/.zshrc'
 alias ..='cd ..'
 alias l='ls -Alhp'
 alias reload='source ~/.zshrc && clear'
@@ -109,6 +112,7 @@ alias mou='open -a Mou'
 alias install-app='brew cask install'
 alias weather='ansiweather -l seattle -u imperial'
 alias vtop='vtop --theme monokai'
+alias duf='du -h -d 0'
 
 function take {
   mkdir -p $1 && cd $1

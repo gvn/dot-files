@@ -94,7 +94,7 @@ var hashes = {
 var oneMonitorLayout = slate.layout('oneMonitor', {
     'Sublime Text 2': hashes.allWindowsFullscreen,
     'iCal': hashes.allWindowsFullscreen,
-    'Spotify': hashes.allWindowsFullscreen,
+    'Swinsian': hashes.allWindowsFullscreen,
     'Mail': hashes.allWindowsFullscreen,
     'iTerm': hashes.allWindowsFullscreen,
     'Mou': hashes.allWindowsFullscreen,
@@ -105,7 +105,7 @@ var oneMonitorLayout = slate.layout('oneMonitor', {
 var twoMonitorLayout = slate.layout('twoMonitors', {
     'Sublime Text 2': hashes.allWindowsFullscreen,
     'iCal': hashes.allWindowsFullscreen2,
-    'Spotify': hashes.allWindowsFullscreen2,
+    'Swinsian': hashes.allWindowsFullscreen2,
     'Mail': hashes.allWindowsFullscreen2,
     'iTerm': hashes.allWindowsFullscreen,
     'Mou': hashes.allWindowsFullscreen,
@@ -130,7 +130,7 @@ slate.bindAll({
     'j:f19': showAndFocusApp('Google Chrome'),
     'k:f19': showAndFocusApp('Atom'),
     'l:f19': showAndFocusApp('iTerm'),
-    ';:f19': showAndFocusApp('IRCCloud'),
+    ';:f19': showAndFocusApp('Slack'),
 
     // Semi-common apps
     'm:f19': showAndFocusApp('Android Studio'),

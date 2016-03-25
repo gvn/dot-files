@@ -20,7 +20,7 @@
 	changed = green
 	untracked = cyan
 [core]
-	excludesfile = "/Users/gvn/Google Drive/dotfiles/.gitignore-global"
+	excludesfile = "/Users/gvn/dotfiles/.gitignore-global"
 [dropbox]
 	folder = "/Users/gsuntop/Google Drive/Code/_git"
 [filter "media"]
