@@ -99,7 +99,7 @@ alias dockup="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/
 
 alias plex-admin='open http://sulaco.local:32400/web/index.html'
 alias syncthing-admin='open http://127.0.0.1:8384'
-alias tweakzshrc='vim /Users/gvn/Google\ Drive/dotfiles/.zshrc'
+alias tweakzshrc='vim /Users/gvn/dotfiles/.zshrc'
 alias ..='cd ..'
 alias l='ls -Alhp'
 alias reload='source ~/.zshrc && clear'
@@ -113,6 +113,12 @@ alias install-app='brew cask install'
 alias weather='ansiweather -l seattle -u imperial'
 alias vtop='vtop --theme monokai'
 alias duf='du -h -d 0'
+
+function timer {
+  local delay=$(($1 * 60))
+  echo "Set timer for $1 minutes."
+  (sleep $delay && noti -t "timer") &
+}
 
 function take {
   mkdir -p $1 && cd $1
@@ -179,7 +185,7 @@ function gint {
 
 alias npmglobal='npm list -g --depth=0'
 alias run='npm run'
-alias npmi='npm install'
+alias 'npm i'='noti npm i'
 
 # ------------------------------------
 # Web
