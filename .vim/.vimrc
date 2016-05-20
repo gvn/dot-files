@@ -8,4 +8,5 @@ set expandtab         " tabs are spaces
 set number            " show line numbers
 set showmatch         " highlight matching [{(
 set ruler
+set nowrap
 
