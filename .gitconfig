@@ -5,16 +5,23 @@
 	user = gvn
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
-	ui = auto
+	ui = always
 [color "branch"]
 	current = yellow reverse
 	local = yellow
 	remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+  meta = white bold
+  commit = green bold
+  frag = magenta
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = "red bold 52"
+  newNormal = "green bold"
+  newHighlight = "green bold 22"
 [color "status"]
 	added = yellow
 	changed = green
@@ -26,6 +33,8 @@
 [filter "media"]
 	required = true
 	clean = git media clean %f
-	smudge = git media smudge %f
+  smudge = git media smudge %f
 [credential]
 	helper = osxkeychain
+[diff-so-fancy]
+	markEmptyLines = false

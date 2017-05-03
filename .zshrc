@@ -98,7 +98,6 @@ alias dockup="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/
 # ------------------------------------
 
 alias plex-admin='open http://sulaco.local:32400/web/index.html'
-alias syncthing-admin='open http://127.0.0.1:8384'
 alias tweakzshrc='vim /Users/gvn/dotfiles/.zshrc'
 alias ..='cd ..'
 alias l='ls -Alhp'
@@ -109,10 +108,10 @@ alias disks='diskutil list'
 alias ejectcd='diskutil eject /dev/disk3'
 alias rip='abcde'
 alias mou='open -a Mou'
-alias install-app='brew cask install'
 alias weather='ansiweather -l seattle -u imperial'
 alias vtop='vtop --theme monokai'
 alias duf='du -h -d 0'
+alias stripcovers='id3v2 -r "APIC" *.mp3'
 
 function timer {
   local delay=$(($1 * 60))
@@ -154,16 +153,17 @@ alias g='git status'
 alias ga='git add'
 alias gcamend='git commit --amend'
 alias gc='git commit'
-alias gd='clear; git diff --unified=5'
+alias gd='clear; git diff --color | diff-so-fancy | less'
 alias gb='git branch -v'
 alias guncommit='git reset --soft HEAD~1'
 alias gr='git remote -v'
 alias gitzilla='git pull mozilla develop'
-alias gpom='git push origin master'
+alias gpom='git checkout master && git pull origin master'
 alias ghp-fresh='git checkout --orphan gh-pages'
 alias gcb='git checkout -b'
 alias gco='git checkout'
 alias gcm='git checkout master'
+alias gpr='git pull-request'
 
 function gsquash () {
   git rebase -i "HEAD~$1"

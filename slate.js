@@ -96,7 +96,7 @@ var oneMonitorLayout = slate.layout('oneMonitor', {
     'iCal': hashes.allWindowsFullscreen,
     'Swinsian': hashes.allWindowsFullscreen,
     'Mail': hashes.allWindowsFullscreen,
-    'iTerm': hashes.allWindowsFullscreen,
+    'iTerm2': hashes.allWindowsFullscreen,
     'Mou': hashes.allWindowsFullscreen,
     'Xcode': hashes.allWindowsFullscreen,
     'Adium': hashes.adium
@@ -107,7 +107,7 @@ var twoMonitorLayout = slate.layout('twoMonitors', {
     'iCal': hashes.allWindowsFullscreen2,
     'Swinsian': hashes.allWindowsFullscreen2,
     'Mail': hashes.allWindowsFullscreen2,
-    'iTerm': hashes.allWindowsFullscreen,
+    'iTerm2': hashes.allWindowsFullscreen,
     'Mou': hashes.allWindowsFullscreen,
     'Xcode': hashes.allWindowsFullscreen,
     'Adium': hashes.adium
@@ -135,8 +135,8 @@ slate.bindAll({
     // Semi-common apps
     'm:f19': showAndFocusApp('Android Studio'),
     'u:f19': showAndFocusApp('Wunderlist'),
-    'i:f19': showAndFocusApp('Calendar'),
-    'o:f19': showAndFocusApp('Xcode'),
+    'i:f19': showAndFocusApp('Google Calendar'),
+    'o:f19': showAndFocusApp('Sketch'),
     'p:f19': showAndFocusApp('Swinsian'),
     'f:f19': showAndFocusApp('Finder'),
 
