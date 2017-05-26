@@ -180,12 +180,13 @@ function gint {
 }
 
 # ------------------------------------
-# npm
+# npm & node
 # ------------------------------------
 
 alias npmglobal='npm list -g --depth=0'
 alias run='npm run'
-alias 'npm i'='noti npm i'
+alias npmi='npm i && noti -t "npm install finished"'
+alias nodei='node --inspect-brk'
 
 # ------------------------------------
 # Web

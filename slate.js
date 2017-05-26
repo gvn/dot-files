@@ -129,7 +129,7 @@ slate.bindAll({
     'h:f19': showAndFocusApp('Firefox'),
     'j:f19': showAndFocusApp('Google Chrome'),
     'k:f19': showAndFocusApp('Atom'),
-    'l:f19': showAndFocusApp('iTerm2'),
+    'l:f19': showAndFocusApp('Hyper'),
     ';:f19': showAndFocusApp('Slack'),
 
     // Semi-common apps
