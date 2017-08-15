@@ -7,7 +7,7 @@ module.exports = {
     fontFamily: '"Meslo LG L", Menlo, monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.8)',
+    cursorColor: 'rgb(90, 247, 142, 0.8)',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'UNDERLINE',
@@ -19,10 +19,20 @@ module.exports = {
     backgroundColor: '#282a36',
 
     // border color (window, tabs)
-    borderColor: '#444',
+    borderColor: 'rgba(100, 100, 100, 0.6)',
 
     // custom css to embed in the main window
-    css: '',
+    css: `
+      .tab_tab:not(.tab_active) {
+        color: rgba(255, 255, 255, 0.3);
+        transition: none;
+      }
+
+      .tab_tab.tab_active {
+        color: rgba(255, 255, 255, 0.9);
+        transition: color 50ms ease-in;
+      }
+    `,
 
     // custom css to embed in the terminal window
     termCSS: `
