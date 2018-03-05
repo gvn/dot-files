@@ -1,5 +1,9 @@
 module.exports = {
   config: {
+    modifierKeys: {
+      altIsMeta: true
+    },
+
     // default font size in pixels for all tabs
     fontSize: 10,
 
@@ -109,7 +113,7 @@ module.exports = {
 
     hyperlinks: {
       defaultBrowser: true,
-      clickAction: `copy`
+      clickAction: 'copy'
     },
 
     paneNavigation: {
