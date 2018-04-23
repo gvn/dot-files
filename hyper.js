@@ -38,20 +38,6 @@ module.exports = {
       }
     `,
 
-    // custom css to embed in the terminal window
-    termCSS: `
-      x-screen a {
-        color: inherit;
-        border-bottom: 1px dotted #666;
-      }
-
-      x-screen a.hover {
-        color: inherit;
-        text-decoration: none;
-        border-bottom: 1px solid magenta;
-      }
-    `,
-
     // set to `true` if you're using a Linux set up
     // that doesn't shows native menus
     // default: `false` on Linux, `true` on Windows (ignored on macOS)
@@ -111,11 +97,6 @@ module.exports = {
 
     // Plugin configs
 
-    hyperlinks: {
-      defaultBrowser: true,
-      clickAction: 'copy'
-    },
-
     paneNavigation: {
       hotkeys: {
         navigation: {
@@ -139,8 +120,7 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     "hyper-pane",
-    "hypercwd",
-    "hyperlinks"
+    "hypercwd"
   ],
 
   // in development, you can create a directory under
