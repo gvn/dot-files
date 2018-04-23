@@ -112,6 +112,7 @@ alias weather='ansiweather -l seattle -u imperial'
 alias vtop='vtop --theme monokai'
 alias duf='du -h -d 0'
 alias stripcovers='id3v2 -r "APIC" *.mp3'
+alias python='/usr/local/bin/python3'
 
 function timer {
   local delay=$(($1 * 60))
