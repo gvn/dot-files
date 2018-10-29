@@ -11,7 +11,7 @@ module.exports = {
     fontFamily: '"Meslo LG L", Menlo, monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgb(90, 247, 142, 0.8)',
+    cursorColor: 'rgba(90, 247, 142, 0.8)',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'UNDERLINE',
