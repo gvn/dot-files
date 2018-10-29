@@ -51,7 +51,8 @@ plugins=(
 
 # User configuration
 
-export PATH="/usr/local/php5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/gvn/bin:/usr/local/sbin"
+export PATH="/usr/local/php5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/gvn/bin:/usr/local/sbin:/Users/gvn/MozCode/git-cinnabar:/Users/gvn/MozCode/arcanist/bin"
+export EDITOR=vim
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -59,13 +60,6 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -75,10 +69,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Switch to Vim mode for prompt
 set -o vi
-
-# Android Shit
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 # Docker stuff
 alias dockup="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'"
@@ -112,7 +102,7 @@ alias weather='ansiweather -l seattle -u imperial'
 alias vtop='vtop --theme monokai'
 alias duf='du -h -d 0'
 alias stripcovers='id3v2 -r "APIC" *.mp3'
-alias python='/usr/local/bin/python3'
+alias ffp='/Applications/Firefox.app/Contents/MacOS/firefox-bin -P'
 
 function timer {
   local delay=$(($1 * 60))
