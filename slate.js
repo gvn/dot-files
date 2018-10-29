@@ -137,7 +137,7 @@ slate.bindAll({
     'u:f19': showAndFocusApp('Wunderlist'),
     'i:f19': showAndFocusApp('Google Calendar'),
     'o:f19': showAndFocusApp('Sketch'),
-    'p:f19': showAndFocusApp('Swinsian'),
+    'p:f19': showAndFocusApp('Spotify'),
     'f:f19': showAndFocusApp('Finder'),
 
     // Manual environment-specific-layout triggers
