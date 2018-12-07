@@ -14,7 +14,7 @@ module.exports = {
     cursorColor: 'rgba(90, 247, 142, 0.8)',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-    cursorShape: 'UNDERLINE',
+    cursorShape: 'BLOCK',
 
     // color of the text
     foregroundColor: '#fff',
@@ -35,6 +35,11 @@ module.exports = {
       .tab_tab.tab_active {
         color: rgba(255, 255, 255, 0.9);
         transition: color 50ms ease-in;
+      }
+
+      .hyper-search-wrapper[style] {
+        height: auto !important;
+        border: 1px solid rgba(255, 255, 255, 0.5) !important;
       }
     `,
 
@@ -118,10 +123,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [
-    "hyper-pane",
-    "hypercwd"
-  ],
+  plugins: ["hyper-pane", "hypercwd", "hyper-search"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
