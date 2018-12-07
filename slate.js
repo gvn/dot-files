@@ -127,8 +127,9 @@ slate.bindAll({
 
     // Most common apps on home row
     'h:f19': showAndFocusApp('Firefox'),
+    'n:f19': showAndFocusApp('Nightly'),
     'j:f19': showAndFocusApp('Google Chrome'),
-    'k:f19': showAndFocusApp('Atom'),
+    'k:f19': showAndFocusApp('Code'),
     'l:f19': showAndFocusApp('Hyper'),
     ';:f19': showAndFocusApp('Slack'),
 
