@@ -51,7 +51,7 @@ plugins=(
 
 # User configuration
 
-export PATH="/usr/local/php5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/gvn/bin:/usr/local/sbin:/Users/gvn/MozCode/git-cinnabar:/Users/gvn/MozCode/arcanist/bin"
+export PATH="/usr/local/php5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/gvn/bin:/usr/local/sbin:/Users/gvn/MozCode/git-cinnabar:/Users/gvn/MozCode/arcanist/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export EDITOR=vim
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -102,7 +102,6 @@ alias weather='ansiweather -l seattle -u imperial'
 alias vtop='vtop --theme monokai'
 alias duf='du -h -d 0'
 alias stripcovers='id3v2 -r "APIC" *.mp3'
-alias ffp='/Applications/Firefox.app/Contents/MacOS/firefox-bin -P'
 
 function timer {
   local delay=$(($1 * 60))
@@ -134,6 +133,22 @@ alias bubu='bubo && bubc'
 alias devices='adb devices'
 alias logcat='adb logcat CordovaLog:D *:S'
 alias forward='adb forward tcp:6000 localfilesystem:/data/local/debugger-socket'
+
+# ------------------------------------
+# Firefox
+# ------------------------------------
+
+# Run Firefox with profile selector
+alias ff='/Applications/Firefox.app/Contents/MacOS/firefox-bin -P'
+
+# mach
+alias mb='./mach build'
+alias mr='./mach run'
+alias mbfr='./mach build faster && ./mach run'
+alias mcbr='./mach clobber && ./mach build && ./mach run'
+
+# Clean out AS code injected into FF repo
+alias mcgtfo='git reset --hard && git clean -d -f && git clean -d -f'
 
 # ------------------------------------
 # Git
