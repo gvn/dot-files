@@ -32,7 +32,7 @@ ZSH_THEME="gvn"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -90,7 +90,7 @@ alias dockup="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/
 alias plex-admin='open http://sulaco.local:32400/web/index.html'
 alias tweakzshrc='vim /Users/gvn/dotfiles/.zshrc'
 alias ..='cd ..'
-alias l='ls -Alhp'
+alias l='ls -hAlp'
 alias reload='source ~/.zshrc && clear'
 alias of='open .'
 alias top='top -o cpu'
@@ -142,13 +142,19 @@ alias forward='adb forward tcp:6000 localfilesystem:/data/local/debugger-socket'
 alias ff='/Applications/Firefox.app/Contents/MacOS/firefox-bin -P'
 
 # mach
-alias mb='./mach build'
-alias mr='./mach run'
-alias mbfr='./mach build faster && ./mach run'
-alias mcbr='./mach clobber && ./mach build && ./mach run'
+alias mbr='./mach clobber && ./mach build && ./mach run -P'
+alias mbf='./mach build faster && ./mach run'
+alias mr='./mach run -P'
+alias mbdr='./mach try -b o -p macosx64 -u none -t none --artifact' # `try` build for review
 
 # Clean out AS code injected into FF repo
 alias mcgtfo='git reset --hard && git clean -d -f && git clean -d -f'
+
+# Pull latest "master" for `mozilla-unified`
+alias mcup='cd /Users/gvn/MozCode/mozilla-unified && git checkout bookmarks/central && mcgtfo && git pull'
+
+# Start up activity stream
+alias dstart='npm i && npm run startmc'
 
 # ------------------------------------
 # Git

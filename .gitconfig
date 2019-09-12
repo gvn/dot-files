@@ -28,6 +28,12 @@
   untracked = cyan
 [core]
   excludesfile = "/Users/gvn/dotfiles/.gitignore-global"
+  filemode = true
+  bare = false
+  logallrefupdates = true
+  ignorecase = true
+  precomposeunicode = true
+  untrackedCache = true # On k88's suggestion to speed up cinnabar repos
 [dropbox]
   folder = "/Users/gsuntop/Google Drive/Code/_git"
 [filter "media"]
